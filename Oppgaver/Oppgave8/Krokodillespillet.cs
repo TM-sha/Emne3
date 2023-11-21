@@ -8,7 +8,7 @@
             int rndNmbr = number.Next(1, 11);
             int rndNmbr2 = number.Next(1, 11);
             
-            Console.Write($"Hva blir svaret på dette: {rndNmbr} _ {rndNmbr2} ? ");
+            Console.Write($"Hva blir svaret på dette: {rndNmbr} _ {rndNmbr2} ? (Trykk på en bokstav for å avslutte spillet) Ditt svar: ");
             var answer = Console.ReadLine();
 
             if (answer == "<" && rndNmbr < rndNmbr2 || 
@@ -23,12 +23,17 @@
 
             else if (answer != "<" && answer != ">" && answer != "=")
             {
+                Console.WriteLine("Spillet avsluttes.");
                 Environment.Exit(1);
             }
 
             else
             {
                 poeng--;
+                if (poeng < 0)
+                {
+                    poeng = 0;
+                }
                 Console.WriteLine("Feil..");
                 Console.WriteLine($"Dine poeng: {poeng}");
                 Console.WriteLine();
