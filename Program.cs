@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Variabel_Oppgaver.Oppgave1;
 using Variabel_Oppgaver.Oppgaver.Oppgave1;
+using Variabel_Oppgaver.Oppgaver.Oppgave12;
 using Variabel_Oppgaver.Oppgaver.Oppgave2;
 using Variabel_Oppgaver.Oppgaver.Oppgave3;
 using Variabel_Oppgaver.Oppgaver.Oppgave4;
@@ -27,29 +28,8 @@ namespace Variabel_Oppgaver
                                   "\t\t\t\t7 => \"GuessTheNumber\"\n\t\t\t\t8 => \"ReturnTrueIfNumbersEqual\"\n\t\t\t\t9 => \"ReturnNumberIfNotEqualAndIfEqual\"\n" +
                                   "\t\t\t\t10 => \"ifElseReturnTrueReturnFalse\"\n\t\t\t\t11 => \"WhichDayInWeekend\"\n\t\t\t\t12 => \"WhichDayInWeekend2 - ReadLine\"\n" +
                                   "\t\t\t\t13 => \"MakeForLoopPrintFiveTimes\"\n\t\t\t\t14 => \"PrintEveryCharInAString\"\n\t\t\t\t15 => \"PrintNumberOfRounds - ReadLine\"\n" +
-                                  "\t\t\t\t16 => \"CrocoGame\"");
+                                  "\t\t\t\t16 => \"CrocoGame\"\n\t\t\t\t17 => \"OverloadsAndDefaultValues\"");
 
-                //Console.WriteLine("Hei på deg! Velkommen til min oversikt over oppgaver i Moodle Emne 3");
-                //Console.WriteLine();
-                //Console.WriteLine();
-                //Console.WriteLine("Skriv inn et tall fra 1 til 16 for å velge oppgaven du vil se på: ");
-                //Console.WriteLine();
-                //Console.WriteLine(
-                //    "1 => \"PrintInputFromUser\"\n2 => \"Make 8 variables\"\n3 => \"Consoll-application that creates 3 variables\"");
-                //Console.WriteLine();
-                //Console.WriteLine(
-                //    "4 => \"ReturnSumOfToNumbers\"\n5 => \"ReturnsNothing\"\n6 => \"RandomHobbyGenerator\"");
-                //Console.WriteLine();
-                //Console.WriteLine(
-                //    "7 => \"GuessTheNumber\"\n8 => \"ReturnTrueIfNumbersEqual\"\n9 => \"ReturnNumberIfNotEqualAndIfEqual\"");
-                //Console.WriteLine();
-                //Console.WriteLine(
-                //    "10 => \"ifElseReturnTrueReturnFalse\"\n11 => \"WhichDayInWeekend\"\n12 => \"WhichDayInWeekend2 - ReadLine\"");
-                //Console.WriteLine();
-                //Console.WriteLine(
-                //    "13 => \"MakeForLoopPrintFiveTImes\"\n14 => \"PrintEveryCharInAString\"\n15 => \"PrintNumberOfRounds - ReadLine\"");
-                //Console.WriteLine();
-                //Console.WriteLine("16 => CrocoGame");
 
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -144,7 +124,7 @@ namespace Variabel_Oppgaver
                         case 7:
                             Console.Clear();
                             Console.WriteLine();
-                            GjettTallet.GuessTheNumber();// Ødelegger do/while (exiter prog)
+                            GjettTallet.GuessTheNumber();
                             Console.WriteLine();
                             Console.Write("Vil du se flere oppgaver? ja/nei: ");
                             if (Console.ReadLine() != "ja")
@@ -169,8 +149,7 @@ namespace Variabel_Oppgaver
                             Console.Clear();
                             Console.WriteLine();
                             Console.WriteLine(
-                                Oppgave5b.ReturnNumberIfNotEqualAndIfEqual(5,
-                                    10)); //Skriv inn ulike tall for ulikt resultat
+                                Oppgave5b.ReturnNumberIfNotEqualAndIfEqual(5, 10)); //Skriv inn ulike tall for ulikt resultat
                             Console.WriteLine();
                             Console.Write("Vil du se flere oppgaver? ja/nei: ");
                             if (Console.ReadLine() != "ja")
@@ -183,8 +162,7 @@ namespace Variabel_Oppgaver
                             Console.Clear();
                             Console.WriteLine();
                             Console.WriteLine(
-                                Oppgave5c.ifElseReturnTrueReturnFalse(10,
-                                    20)); //Skriv inn ulike tall for ulikt resultat
+                                Oppgave5c.ifElseReturnTrueReturnFalse(10, 20)); //Skriv inn ulike tall for ulikt resultat
                             Console.WriteLine();
                             Console.Write("Vil du se flere oppgaver? ja/nei: ");
                             if (Console.ReadLine() != "ja")
@@ -259,6 +237,17 @@ namespace Variabel_Oppgaver
                             Console.WriteLine("Velkommen til Krokodillespillet!\n");
                             int poeng = 0;
                             Krokodillespillet.CrocoGame(poeng);
+                            Console.Write("Vil du se flere oppgaver? ja/nei: ");
+                            if (Console.ReadLine() != "ja")
+                            {
+                                Console.WriteLine("Programmet avsluttes.");
+                                return;
+                            }
+                            break;
+                        case 17:
+                            Console.Clear();
+                            Console.WriteLine();
+                            Overloads.PrintWelcomeMessage();// Skriv inn navn for å endre utfall
                             Console.Write("Vil du se flere oppgaver? ja/nei: ");
                             if (Console.ReadLine() != "ja")
                             {
