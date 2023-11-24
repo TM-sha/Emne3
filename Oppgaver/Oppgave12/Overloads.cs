@@ -2,9 +2,14 @@
 {
     internal class Overloads
     {
-        public static void PrintWelcomeMessage(string name = "Terje")
+        public static void PrintWelcomeMessage()
         {
-            Console.WriteLine($"Hei og velkommen {name}");
+            Console.WriteLine($"Hei og velkommen");
+        }
+
+        public static void PrintWelcomeMessage(string greeting, string name = "Terje")
+        {
+            Console.WriteLine(greeting + " " + name);
         }
     }
 }
