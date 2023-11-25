@@ -7,10 +7,10 @@
 
             if (number1 == number2)
             {
-                Console.WriteLine("Tallene er like");
+                Console.WriteLine("Tallene er like. Dermed returneres => true");
                 return true;
             }
-            Console.WriteLine("Tallene er ulike");
+            Console.WriteLine("Tallene er ulike. Dermed returneres => false");
             return false;
         }
     }
