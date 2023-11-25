@@ -1,4 +1,6 @@
-﻿namespace Variabel_Oppgaver.Oppgaver.Oppgave4
+﻿using System.Runtime.InteropServices;
+
+namespace Variabel_Oppgaver.Oppgaver.Oppgave4
 {
     internal class GjettTallet
     {
@@ -12,7 +14,7 @@
       
         static void anotherGuessTheNumber(int rndNumber)
         {
-            Console.WriteLine("Gjett et tall mellom 1 og 100");
+            Console.WriteLine("Guess a number between 1 and 100");
             Console.WriteLine();
             int guessedNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
@@ -27,7 +29,7 @@
             }
             else
             {
-                Console.WriteLine("Riktig! Vil du spille på nytt? y/n");
+                Console.WriteLine("Correct! You wanna play again? y/n ");
                 Console.WriteLine();
                 if (Console.ReadLine() == "y")
                 {
@@ -36,7 +38,8 @@
                 }
                 else
                 {
-                    Environment.Exit(1);
+                    Program.Main();
+                    //Environment.Exit(0);
                 }
             }
             Console.WriteLine();
