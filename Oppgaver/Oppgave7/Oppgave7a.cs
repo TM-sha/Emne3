@@ -2,7 +2,7 @@
 {
     internal class Oppgave7a
     {
-        public static void MakeForLoopPrintFiveTImes()
+        public static void MakeForLoopPrintFiveTimes()
         {
             for (int i = 0; i < 5; i ++)
             {
