@@ -8,7 +8,7 @@
             int a = 5;
             decimal b = 3.0M;
             decimal sum = a + b;
-            Console.WriteLine($"{a} pluss {b} = {sum}");
+            Console.WriteLine($"{a} + {b} = {sum}");
         }
     }
 }
