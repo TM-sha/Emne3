@@ -31,7 +31,6 @@
                 Console.WriteLine($"{answer} sin nye hobby er: Jogging");
             }
             Console.WriteLine();
-            GenerateRandomHobbies();
         }
     }
 }
