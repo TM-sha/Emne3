@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using Variabel_Oppgaver.Oppgave1;
 using Variabel_Oppgaver.Oppgaver.Oppgave1;
-using Variabel_Oppgaver.Oppgaver.Oppgave12;
 using Variabel_Oppgaver.Oppgaver.Oppgave2;
 using Variabel_Oppgaver.Oppgaver.Oppgave3;
 using Variabel_Oppgaver.Oppgaver.Oppgave4;
@@ -10,6 +9,7 @@ using Variabel_Oppgaver.Oppgaver.Oppgave5;
 using Variabel_Oppgaver.Oppgaver.Oppgave6;
 using Variabel_Oppgaver.Oppgaver.Oppgave7;
 using Variabel_Oppgaver.Oppgaver.Oppgave8;
+using Variabel_Oppgaver.Oppgaver.Oppgave12;
 
 namespace Variabel_Oppgaver
 {
@@ -31,7 +31,7 @@ namespace Variabel_Oppgaver
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Hei på deg! Velkommen til min oversikt over oppgaver i Moodle Emne 3 \n");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Skriv inn et tall fra 1 til 16 for å velge oppgaven du vil se på: \n" +
+            Console.WriteLine("Skriv inn et tall fra 1 til 17 for å velge oppgaven du vil se på: \n" +
                               "\t\t\t\t1 => \"PrintInputFromUser\"\n\t\t\t\t2 => \"Make 8 variables\"\n\t\t\t\t3 => \"Consoll-application that creates 3 variables\"\n" +
                               "\t\t\t\t4 => \"ReturnSumOfToNumbers\"\n\t\t\t\t5 => \"ReturnsNothing\"\n\t\t\t\t6 => \"RandomHobbyGenerator\"\n" +
                               "\t\t\t\t7 => \"GuessTheNumber\"\n\t\t\t\t8 => \"ReturnTrueIfNumbersEqual\"\n\t\t\t\t9 => \"ReturnNumberIfNotEqualAndIfEqual\"\n" +
