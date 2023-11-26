@@ -2,16 +2,15 @@
 {
     internal class Oppgave6b
     {
-        public static void WhichDayInWeekend2()
+        public static void WhichDay2()
         {
-           // while(true) Looper funskjonen
-           // {
-                Console.WriteLine("Which day do you want to see? 1-7");
-                Console.WriteLine();
-                var nmb = Console.ReadLine();
-                Console.WriteLine();
-                switch(nmb)
-                {
+
+            Console.WriteLine("Which day do you want to see? 1-7");
+            Console.WriteLine();
+            var nmb = Console.ReadLine();
+            Console.WriteLine();
+            switch (nmb)
+            {
                 case "1":
                     Console.WriteLine("Monday");
                     break;
@@ -34,11 +33,10 @@
                     Console.WriteLine("Sunday");
                     break;
                 default:
-                    WhichDayInWeekend2();
+                    WhichDay2();
                     break;
-                };
-                Console.WriteLine();   
-           // }
+            };
+            Console.WriteLine();
         }
     }
 }
