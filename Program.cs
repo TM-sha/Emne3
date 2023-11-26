@@ -35,7 +35,7 @@ namespace Variabel_Oppgaver
                               "\t\t\t\t1 => \"PrintInputFromUser\"\n\t\t\t\t2 => \"Make 8 variables\"\n\t\t\t\t3 => \"Consoll-application that creates 3 variables\"\n" +
                               "\t\t\t\t4 => \"ReturnSumOfToNumbers\"\n\t\t\t\t5 => \"ReturnsNothing\"\n\t\t\t\t6 => \"RandomHobbyGenerator\"\n" +
                               "\t\t\t\t7 => \"GuessTheNumber\"\n\t\t\t\t8 => \"ReturnTrueIfNumbersEqual\"\n\t\t\t\t9 => \"ReturnNumberIfNotEqualAndIfEqual\"\n" +
-                              "\t\t\t\t10 => \"ifElseReturnTrueReturnFalse\"\n\t\t\t\t11 => \"WhichDayInWeekend\"\n\t\t\t\t12 => \"WhichDayInWeekend2 - ReadLine\"\n" +
+                              "\t\t\t\t10 => \"ifElseReturnTrueReturnFalse\"\n\t\t\t\t11 => \"WhichDay\"\n\t\t\t\t12 => \"WhichDay2 - ReadLine\"\n" +
                               "\t\t\t\t13 => \"MakeForLoopPrintFiveTimes\"\n\t\t\t\t14 => \"PrintEveryCharInAString\"\n\t\t\t\t15 => \"PrintNumberOfRounds - ReadLine\"\n" +
                               "\t\t\t\t16 => \"CrocoGame\"\n\t\t\t\t17 => \"OverloadsAndDefaultValues\"");
 
@@ -102,10 +102,10 @@ namespace Variabel_Oppgaver
                     ExectueTask(() => Oppgave5c.ifElseReturnTrueReturnFalse(10, 20)); //Skriv inn forskjellig tall
                     break;
                 case 11:
-                    ExectueTask(Oppgave6a.WhichDayInWeekend, 5); //Skriv et annet tall for å printe ut annen dag
+                    ExectueTask(Oppgave6a.WhichDay, 5); //Skriv et annet tall for å printe ut annen dag
                     break;
                 case 12:
-                    ExectueTask(Oppgave6b.WhichDayInWeekend2);
+                    ExectueTask(Oppgave6b.WhichDay2);
                     break;
                 case 13:
                     ExectueTask(Oppgave7a.MakeForLoopPrintFiveTimes);
