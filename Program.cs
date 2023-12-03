@@ -17,12 +17,18 @@ namespace Variabel_Oppgaver
     {
         public static void Main()
         {
-            DisplayMenu();
+            bool running = true;
+            while (running)
+            {
+                Console.Clear();
+                DisplayMenu();
+                var taskNr = GetTaskNumber();
 
-            //forslag fra Stian:
-            //lag en DisplayMenu() metode som viser all den teksten du har lenger opp, istedenfor å ha det i Main
-            //lag en GetTaskNumber() som tar for seg input delen
-            //lag en ExecuteTask(int taskNr) som inneholder switch statementen
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write($"Vil du se på oppgave {taskNr}? ja/nei: ");
+                if (Console.ReadLine().ToLower() == "ja") ExecuteTask(taskNr);
+                else running = false;
+            }
         }
 
         private static void DisplayMenu()
@@ -37,32 +43,17 @@ namespace Variabel_Oppgaver
                               "\t\t\t\t7 => \"GuessTheNumber\"\n\t\t\t\t8 => \"ReturnTrueIfNumbersEqual\"\n\t\t\t\t9 => \"ReturnNumberIfNotEqualAndIfEqual\"\n" +
                               "\t\t\t\t10 => \"ifElseReturnTrueReturnFalse\"\n\t\t\t\t11 => \"WhichDay\"\n\t\t\t\t12 => \"WhichDay2 - ReadLine\"\n" +
                               "\t\t\t\t13 => \"MakeForLoopPrintFiveTimes\"\n\t\t\t\t14 => \"PrintEveryCharInAString\"\n\t\t\t\t15 => \"PrintNumberOfRounds - ReadLine\"\n" +
-                              "\t\t\t\t16 => \"CrocoGame\"\n\t\t\t\t17 => \"OverloadsAndDefaultValues\"");
+                              "\t\t\t\t16 => \"CrocoGame\"\n\t\t\t\t17 => \"OverloadsAndDefaultValues\"\n");
+        }
 
 
-            Console.WriteLine();
+        private static int GetTaskNumber()
+        {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("Tast inn tall og trykk Enter\t");
             Console.ForegroundColor = ConsoleColor.White;
             var taskNr = Convert.ToInt32(Console.ReadLine());
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            GetTaskNumber(taskNr);
-        }
-
-
-        private static void GetTaskNumber(int taskNr)
-        {
-            Console.Write($"Vil du se på oppgave {taskNr}? ja/nei: ");
-            if (Console.ReadLine().ToLower() == "ja")
-            {
-                ExecuteTask(taskNr);
-            }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine("Programmet avsluttes.");
-            }
+            return taskNr;
         }
 
 
@@ -88,6 +79,7 @@ namespace Variabel_Oppgaver
                     break;
                 case 6:
                     ExectueTask(RandomHobbyGenerator.GenerateRandomHobbies);
+                    ExectueTask(RandomHobbyGenerator.TryAgain);
                     break;
                 case 7:
                     ExectueTask(GjettTallet.GuessTheNumber);
@@ -117,7 +109,7 @@ namespace Variabel_Oppgaver
                     ExectueTask(Oppgave7c.PrintNumberOfRounds);
                     break;
                 case 16:
-                    ExectueTask(Krokodillespillet.CrocoGame, 0); //Exiter loopen når man skriver inn en bokstav
+                    ExectueTask(Krokodillespillet.CrocoGame, 0);
                     break;
                 case 17:
                     //PrintWelcomeMessage(); -> Hei og velkommen Terje
@@ -173,7 +165,7 @@ namespace Variabel_Oppgaver
             SeFlereOppgaver();
         }
 
-        private static bool SeFlereOppgaver() //trengs det en 'bool' her Stian? Erstattes den med en void og man fjerner 'return true' fungerer det likevel..
+        private static bool SeFlereOppgaver() 
         {
             Console.WriteLine();
             Console.Write("Vil du se flere oppgaver? ja/nei: ");
